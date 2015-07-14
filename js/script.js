@@ -17,7 +17,7 @@
         }),
         reveal: function(event) {
                 console.log(event)
-                $(event).css('background-color', 'blue')
+                $(event).css('background', 'none')
                     // for (var i = 0; i < 2; i++) {
                     // $(this).css('background-color', 'red')
 
