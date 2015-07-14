@@ -23,15 +23,18 @@
                 // $(this).css('background-color', 'red')
 
             // }
-        },
-        // Place card fronts into divs with display: hidden
-        shuffle: function() {
-
         }
     }
 
     // Store card fronts
-    var cardDeck1 = {
+    var gamePlay = {
+        // Play button triggers alert to play
+        start: function(){
+            gamePlay.shuffle()
+            alert("Select two cards untill you've matched them all!")
+        },
+
+        // Card Deck
         card01: null,
         card02: null,
         card03: null,
@@ -67,7 +70,13 @@
         card33: null,
         card34: null,
         card35: null,
-        card36: null
+        card36: null,
+
+        // Randomize cards
+        shuffle: function (){
+            // places random cards onto the board with display hidden
+            console.log("random")
+        }
     }
 
     // Buttons
@@ -85,6 +94,7 @@
             $('#play').on('click', function(event) {
             event.preventDefault()
             console.log("Play Button")
+                gamePlay.start();
                 // trigger concentration()
         })
     }
