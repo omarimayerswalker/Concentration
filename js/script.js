@@ -29,53 +29,63 @@
     // Store card fronts
     var gamePlay = {
         // Play button triggers alert to play
-        start: function(){
+        start: function() {
             gamePlay.shuffle()
             alert("Select two cards untill you've matched them all!")
         },
 
         // Card Deck
-        card01: null,
-        card02: null,
-        card03: null,
-        card04: null,
-        card05: null,
-        card06: null,
-        card07: null,
-        card08: null,
-        card09: null,
-        card10: null,
-        card11: null,
-        card12: null,
-        card13: null,
-        card14: null,
-        card15: null,
-        card16: null,
-        card17: null,
-        card18: null,
-        card19: null,
-        card20: null,
-        card21: null,
-        card22: null,
-        card23: null,
-        card24: null,
-        card25: null,
-        card26: null,
-        card27: null,
-        card28: null,
-        card29: null,
-        card30: null,
-        card31: null,
-        card32: null,
-        card33: null,
-        card34: null,
-        card35: null,
-        card36: null,
+
+        cardDeck: ["android",
+            "angular",
+            "antergos",
+            "arch",
+            "backbone",
+            "bitcoin",
+            "bower",
+            "C",
+            "C++",
+            "chakra",
+            "clementine",
+            "coffee",
+            "copyleft",
+            "csharp",
+            "css3",
+            "dart",
+            "debian",
+            "diaspora",
+            "dj",
+            "django",
+            "docker",
+            "dogecoin",
+            "drupal",
+            "elementary",
+            "emacs",
+            "fluxbox",
+            "freebsd",
+            "gentoo",
+            "gimp",
+            "git",
+            "gnome",
+            "gnu",
+            "golang",
+            "grunt",
+            "html5",
+            "js"
+                  ],
+        // Taken cards
+        taken: [],
 
         // Randomize cards
-        shuffle: function (){
+        shuffle: function() {
             // places random cards onto the board with display hidden
             console.log("random")
+            // Selects random Card
+            while (gamePlay.taken.length < 18){
+            var randomCard = gamePlay.cardDeck[Math.floor(Math.random() * gamePlay.cardDeck.length)];
+            gamePlay.taken.push(randomCard)
+            }
+            console.log(gamePlay.taken)
         }
     }
 
@@ -94,7 +104,7 @@
             $('#play').on('click', function(event) {
             event.preventDefault()
             console.log("Play Button")
-                gamePlay.start();
-                // trigger concentration()
+            gamePlay.start();
+            // trigger concentration()
         })
     }

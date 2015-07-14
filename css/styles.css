@@ -51,9 +51,151 @@ header {
     background-image: url(../img/binary2.jpg);
 }
 
-.front {
-    /* background-image: url(../img/androidR.png); */
+/* Card Fronts */
+
+.android {
+    background-image: url(../img/androidR.jpg);
 }
+
+.angular {
+    background-image: url(../img/angularR.jpg);
+}
+
+.antergos {
+    background-image: url(../img/antergosR.jpg);
+}
+
+.arch {
+    background-image: url(../img/archR.jpg);
+}
+
+.backbone {
+    background-image: url(../img/backboneR.jpg);
+}
+
+.bitcoin {
+    background-image: url(../img/bitcoinR.jpg);
+}
+
+.bower {
+    background-image: url(../img/BowerR.jpg);
+}
+
+.c {
+    background-image: url(../img/CR.jpg);
+}
+
+.cplusplus {
+    background-image: url(../img/C++R.jpg);
+}
+
+.chakra {
+    background-image: url(../img/chakraR.jpg);
+}
+.clementine {
+    background-image: url(../img/ClementineR.jpg);
+}
+
+.coffee {
+    background-image: url(../img/CoffeeR.jpg);
+}
+
+.copyleft {
+    background-image: url(../img/copyleftR.jpg);
+}
+
+.csharp {
+    background-image: url(../img/CsharpR.jpg);
+}
+
+.css3 {
+    background-image: url(../img/css3dR.jpg);
+}
+
+.dart {
+    background-image: url(../img/dartR.jpg);
+}
+
+.debian {
+    background-image: url(../img/debianR.jpg);
+}
+
+.diaspora {
+    background-image: url(../img/diasporaR.jpg);
+}
+
+.dj {
+    background-image: url(../img/djR.jpg);
+}
+
+.django {
+    background-image: url(../img/djangoR.jpg);
+}
+
+.docker {
+    background-image: url(../img/DockerR.jpg);
+}
+
+.dogecoin {
+    background-image: url(../img/DogecoinR.jpg);
+}
+
+.drupal {
+    background-image: url(../img/drupalR.jpg);
+}
+
+.elementary {
+    background-image: url(../img/elementaryR.jpg);
+}
+
+.emacs {
+    background-image: url(../img/EmacsR.jpg);
+}
+
+.fluxbox {
+    background-image: url(../img/FluxboxR.jpg);
+}
+
+.freebsd {
+    background-image: url(../img/freebsdR.jpg);
+}
+
+.gentoo {
+    background-image: url(../img/gentooR.jpg);
+}
+
+.gimp {
+    background-image: url(../img/gimpR.jpg);
+}
+
+.git {
+    background-image: url(../img/gitR.jpg);
+}
+
+.gnome {
+    background-image: url(../img/gnomeR.jpg);
+}
+
+.gnu {
+    background-image: url(../img/gnuR.jpg);
+}
+
+.golang {
+    background-image: url(../img/golangR.jpg);
+}
+
+.grunt {
+    background-image: url(../img/GruntR.jpg);
+}
+
+.html5 {
+    background-image: url(../img/html5R.jpg);
+}
+
+.js {
+    background-image: url(../img/jsR.jpg);
+}
+
 .highlight {
     border-color: red;
 }
