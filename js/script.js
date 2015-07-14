@@ -84,6 +84,11 @@
             while (gamePlay.taken.length < 18){
             var randomCard = gamePlay.cardDeck[Math.floor(Math.random() * gamePlay.cardDeck.length)];
             gamePlay.taken.push(randomCard)
+                for(i in gamePlay.taken){
+                    if (i == randomCard){
+                        gamePlay.taken.pop(i)
+                    }
+                        }
             }
             console.log(gamePlay.taken)
         }
