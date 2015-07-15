@@ -15,7 +15,9 @@ Select two cards and try to make a match. If you don't make a match the two sele
  - Weekend: I brainstormed about how I wanted the game to look
  - Weekend: I wrote my user stories as well
  - Monday: Continued to brainstorm about the construction of the game, specifically the interface
- - Monday: Created the basic layout of the board
+ - Monday: Created the basic layout of the board; created event listeners
+ - Tuesday: Created most the game. Trouble shooted allot untill I achieved MVP
+ - Wednesday: Trouble shooted bugs. Worked on making the site look better
 
 * User Stories
 
@@ -26,6 +28,3 @@ Select two cards and try to make a match. If you don't make a match the two sele
   - user must be able to easy recognize they have selected a card and see
     what card it is 
   - user must be able to reset the game
-
-
-
