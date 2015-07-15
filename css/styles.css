@@ -1,7 +1,8 @@
 * {
     box-sizing: border-box;
-    color: grey;
+    color: white;
     font-family: helvetica;
+    background-position: center;
 }
 
 img {
@@ -29,6 +30,7 @@ header {
     position: relative;
     display: block;
     width: 90%;
+    min-width: 1440px;
     height: 70%;
     margin: auto;
     margin-top: 4em;
@@ -206,7 +208,7 @@ header {
 
 .highlight {
     border-color: cyan;
-    border-width: 1px;
+    border-width: 2px;
 }
 
 footer {
