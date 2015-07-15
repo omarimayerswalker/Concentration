@@ -46,15 +46,13 @@ var playerMoves = {
         // Finds a match between two cards
         if (twoCards[0] == twoCards[1]) {
             alert("You have a match!")
-            for (var i = 0; i < playerMoves.twoCards.length; i++){
+            for (var i = 0; i < playerMoves.twoCards.length; i++) {
                 $("#" + playerMoves.twoCards[0]).addClass("flipOutY")
                 $("#" + playerMoves.twoCards[1]).addClass("flipOutY")
             }
-            console.log(playerMoves.twoCards)
             playerMoves.cardCounter = 0
             playerMoves.twoCards = []
             playerMoves.choosenTwo = []
-            console.log(playerMoves.choosenTwo)
         } else {
             var delay = setTimeout(function() {
                 $("div").removeClass(playerMoves.choosenTwo[0])
@@ -70,7 +68,7 @@ var gamePlay = {
     // Play button triggers alert to play
     start: function() {
         gamePlay.arrangeBoard()
-        // alert("Select two cards untill you've matched them all!")
+            // alert("Select two cards untill you've matched them all!")
     },
 
     // Card Deck
