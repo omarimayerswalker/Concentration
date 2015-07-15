@@ -1,5 +1,7 @@
 * {
     box-sizing: border-box;
+    color: white;
+    font-family: monospace;
 }
 
 main {
@@ -55,6 +57,7 @@ header {
     background-image: url(../img/binary2.jpg);
 }
 
+
 /* Card Fronts */
 
 .android {
@@ -96,6 +99,7 @@ header {
 .chakra {
     background-image: url(../img/chakraR.png);
 }
+
 .clementine {
     background-image: url(../img/ClementineR.png);
 }
@@ -201,7 +205,8 @@ header {
 }
 
 .highlight {
-    border-color: red;
+    border-color: cyan;
+    border-width: 1px;
 }
 
 footer {

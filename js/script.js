@@ -20,29 +20,34 @@
         reveal: function(event) {
             var clickedCard = $(event).html()
                 // Reveal the reverse of the selected card
-                // $(event).removeClass('back')
             if (playerMoves.cardCounter < 2) {
 
                 //"flips" over card
                 $(event).addClass(clickedCard)
                 playerMoves.choosenTwo.push(clickedCard)
                 playerMoves.cardCounter++
-                playerMoves.match(playerMoves.choosenTwo)
-                    // $(event).addClass("back")
-            }else {
+                    playerMoves.match(playerMoves.choosenTwo)
+            } else {
                 playerMoves.cardCounter = 0
+                    // $("div").removeClass(playerMoves.choosenTwo[0])
+                    // $("div").removeClass(playerMoves.choosenTwo[1])
                 playerMoves.choosenTwo = []
             }
         },
 
         match: function(twoCards) {
             console.log(twoCards)
-                if (twoCards[0] == twoCards[1]){
-                    alert("You have a match!")
-                    playerMoves.cardCounter = 0
-                    playerMoves.choosenTwo = []
-                    console.log(playerMoves.cardCounter)
-                }
+            if (twoCards[0] == twoCards[1]) {
+                alert("You have a match!")
+                playerMoves.cardCounter = 0
+                playerMoves.choosenTwo = []
+            } else {
+                var delay = setTimeout(function() {
+                        $("div").removeClass(playerMoves.choosenTwo[0])
+                        $("div").removeClass(playerMoves.choosenTwo[1])
+                    }, 5000)
+                    //"flips" the choosenTwo back over
+            }
         }
     }
 
@@ -82,16 +87,13 @@
         // Creates 2 instances of each card used
         arrangeBoard: function() {
             gamePlay.fullBoard = gamePlay.cardDeck1.concat(gamePlay.cardDeck1)
-                // console.log(gamePlay.fullBoard)
             return gamePlay.shuffle(gamePlay.fullBoard)
-                // console.log(gamePlay.fullBoard)
         },
 
         // Shuffles cards
         shuffle: function(o) {
             for (var j, x, i = o.length; i; j = parseInt(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x)
                 gamePlay.shuffledBoard = o
-            console.log(gamePlay.shuffledBoard)
             return gamePlay.addToBoard()
         },
 
@@ -142,6 +144,7 @@
     // Buttons
 
     var buttons = {
+
         // Reset button
         reset:
         // Reset button: complete
@@ -155,7 +158,6 @@
         // Play button
             $('#play').on('click', function(event) {
             event.preventDefault()
-                // console.log("Play Button")
             gamePlay.start();
             // trigger concentration()
         })
