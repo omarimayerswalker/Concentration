@@ -11,6 +11,7 @@ main {
 }
 
 header {
+    background-color: black;
     display: block;
     position: relative;
     text-align: center;
@@ -41,6 +42,7 @@ header {
     display: inline-block;
     /* background-color: #2b2b2b; */
     width: 10%;
+    text-align: center;
     margin: 0 3px;
     min-width: 100px;
     height: 90%;
@@ -54,146 +56,146 @@ header {
 /* Card Fronts */
 
 .android {
-    background-image: url(../img/androidR.jpg);
+    background-image: url(../img/androidR.png);
 }
 
 .angular {
-    background-image: url(../img/angularR.jpg);
+    background-image: url(../img/angularR.png);
 }
 
 .antergos {
-    background-image: url(../img/antergosR.jpg);
+    background-image: url(../img/antergosR.png);
 }
 
 .arch {
-    background-image: url(../img/archR.jpg);
+    background-image: url(../img/archR.png);
 }
 
 .backbone {
-    background-image: url(../img/backboneR.jpg);
+    background-image: url(../img/backboneR.png);
 }
 
 .bitcoin {
-    background-image: url(../img/bitcoinR.jpg);
+    background-image: url(../img/bitcoinR.png);
 }
 
 .bower {
-    background-image: url(../img/BowerR.jpg);
+    background-image: url(../img/BowerR.png);
 }
 
 .c {
-    background-image: url(../img/CR.jpg);
+    background-image: url(../img/CR.png);
 }
 
 .cplusplus {
-    background-image: url(../img/C++R.jpg);
+    background-image: url(../img/C++R.png);
 }
 
 .chakra {
-    background-image: url(../img/chakraR.jpg);
+    background-image: url(../img/chakraR.png);
 }
 .clementine {
-    background-image: url(../img/ClementineR.jpg);
+    background-image: url(../img/ClementineR.png);
 }
 
 .coffee {
-    background-image: url(../img/CoffeeR.jpg);
+    background-image: url(../img/CoffeeR.png);
 }
 
 .copyleft {
-    background-image: url(../img/copyleftR.jpg);
+    background-image: url(../img/copyleftR.png);
 }
 
 .csharp {
-    background-image: url(../img/CsharpR.jpg);
+    background-image: url(../img/CsharpR.png);
 }
 
 .css3 {
-    background-image: url(../img/css3dR.jpg);
+    background-image: url(../img/css3dR.png);
 }
 
 .dart {
-    background-image: url(../img/dartR.jpg);
+    background-image: url(../img/dartR.png);
 }
 
 .debian {
-    background-image: url(../img/debianR.jpg);
+    background-image: url(../img/debianR.png);
 }
 
 .diaspora {
-    background-image: url(../img/diasporaR.jpg);
+    background-image: url(../img/diasporaR.png);
 }
 
 .dj {
-    background-image: url(../img/djR.jpg);
+    background-image: url(../img/djR.png);
 }
 
 .django {
-    background-image: url(../img/djangoR.jpg);
+    background-image: url(../img/djangoR.png);
 }
 
 .docker {
-    background-image: url(../img/DockerR.jpg);
+    background-image: url(../img/DockerR.png);
 }
 
 .dogecoin {
-    background-image: url(../img/DogecoinR.jpg);
+    background-image: url(../img/DogecoinR.png);
 }
 
 .drupal {
-    background-image: url(../img/drupalR.jpg);
+    background-image: url(../img/drupalR.png);
 }
 
 .elementary {
-    background-image: url(../img/elementaryR.jpg);
+    background-image: url(../img/elementaryR.png);
 }
 
 .emacs {
-    background-image: url(../img/EmacsR.jpg);
+    background-image: url(../img/EmacsR.png);
 }
 
 .fluxbox {
-    background-image: url(../img/FluxboxR.jpg);
+    background-image: url(../img/FluxboxR.png);
 }
 
 .freebsd {
-    background-image: url(../img/freebsdR.jpg);
+    background-image: url(../img/freebsdR.png);
 }
 
 .gentoo {
-    background-image: url(../img/gentooR.jpg);
+    background-image: url(../img/gentooR.png);
 }
 
 .gimp {
-    background-image: url(../img/gimpR.jpg);
+    background-image: url(../img/gimpR.png);
 }
 
 .git {
-    background-image: url(../img/gitR.jpg);
+    background-image: url(../img/gitR.png);
 }
 
 .gnome {
-    background-image: url(../img/gnomeR.jpg);
+    background-image: url(../img/gnomeR.png);
 }
 
 .gnu {
-    background-image: url(../img/gnuR.jpg);
+    background-image: url(../img/gnuR.png);
 }
 
 .golang {
-    background-image: url(../img/golangR.jpg);
+    background-image: url(../img/golangR.png);
 }
 
 .grunt {
-    background-image: url(../img/GruntR.jpg);
+    background-image: url(../img/GruntR.png);
 }
 
 .html5 {
-    background-image: url(../img/html5R.jpg);
+    background-image: url(../img/html5R.png);
 }
 
 .js {
-    background-image: url(../img/jsR.jpg);
+    background-image: url(../img/jsR.png);
 }
 
 .highlight {
