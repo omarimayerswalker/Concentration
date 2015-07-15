@@ -47,8 +47,6 @@ var playerMoves = {
         if (twoCards[0] == twoCards[1]) {
             alert("You have a match!")
             console.log(playerMoves.choosenTwo)
-            // var hide1 = $('#' + playerMoves.twoCards[0]).hide()
-            // var hide2 = $('#' + playerMoves.twoCards[1]).hide()
             playerMoves.cardCounter = 0
             playerMoves.choosenTwo = []
             console.log(playerMoves.choosenTwo)
