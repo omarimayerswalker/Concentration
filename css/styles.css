@@ -47,7 +47,7 @@ header {
     display: inline-block;
     width: 10%;
     text-align: center;
-    /* text-indent: -9999px; */
+    text-indent: -9999px;
     background-repeat: no-repeat;
     margin: 0 3px;
     min-width: 100px;
