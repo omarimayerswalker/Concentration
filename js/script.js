@@ -10,7 +10,7 @@ var playerMoves = {
     cardCounter: null,
     cardSelect: $('.card').on('click', function(event) {
         event.preventDefault()
-        playerMoves.twoCards.push(event.target.id)
+        playerMoves.twoCards.unshift(event.target.id)
         playerMoves.reveal(event.target)
     }),
 
@@ -47,10 +47,12 @@ var playerMoves = {
         if (twoCards[0] == twoCards[1]) {
             alert("You have a match!")
             for (var i = 0; i < playerMoves.twoCards.length; i++){
-                $("#" + playerMoves.twoCards[i]).addClass("flipOutY")
+                $("#" + playerMoves.twoCards[0]).addClass("flipOutY")
+                $("#" + playerMoves.twoCards[1]).addClass("flipOutY")
             }
-            console.log(playerMoves.choosenTwo)
+            console.log(playerMoves.twoCards)
             playerMoves.cardCounter = 0
+            playerMoves.twoCards = []
             playerMoves.choosenTwo = []
             console.log(playerMoves.choosenTwo)
         } else {
@@ -68,7 +70,7 @@ var gamePlay = {
     // Play button triggers alert to play
     start: function() {
         gamePlay.arrangeBoard()
-        alert("Select two cards untill you've matched them all!")
+        // alert("Select two cards untill you've matched them all!")
     },
 
     // Card Deck
@@ -163,14 +165,6 @@ var buttons = {
         $('#reset').on('click', function(event) {
         event.preventDefault()
         window.location.reload()
-    }),
-
-    // Play button
-    play:
-
-    // Play button
-        $('#play').on('click', function(event) {
-        event.preventDefault()
-        gamePlay.start();
     })
+
 }
