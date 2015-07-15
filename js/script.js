@@ -11,6 +11,7 @@
         }),
 
         cardHighlight:
+
         //Card Highlighter
             $('.card').hover(function() {
             $(this).addClass('highlight')
@@ -18,8 +19,9 @@
             $(this).removeClass('highlight')
         }),
         reveal: function(event) {
+
+            // Reveal the reverse of the selected card
             var clickedCard = $(event).html()
-                // Reveal the reverse of the selected card
             if (playerMoves.cardCounter < 2) {
 
                 //"flips" over card
@@ -29,30 +31,31 @@
                     playerMoves.match(playerMoves.choosenTwo)
             } else {
                 playerMoves.cardCounter = 0
-                    // $("div").removeClass(playerMoves.choosenTwo[0])
-                    // $("div").removeClass(playerMoves.choosenTwo[1])
+                $("div").removeClass(playerMoves.choosenTwo[0])
+                $("div").removeClass(playerMoves.choosenTwo[1])
                 playerMoves.choosenTwo = []
             }
         },
 
         match: function(twoCards) {
-            console.log(twoCards)
+
+            // Finds a match between two cards
             if (twoCards[0] == twoCards[1]) {
                 alert("You have a match!")
                 playerMoves.cardCounter = 0
                 playerMoves.choosenTwo = []
             } else {
                 var delay = setTimeout(function() {
-                        $("div").removeClass(playerMoves.choosenTwo[0])
-                        $("div").removeClass(playerMoves.choosenTwo[1])
-                    }, 5000)
-                    //"flips" the choosenTwo back over
+                    $("div").removeClass(playerMoves.choosenTwo[0])
+                    $("div").removeClass(playerMoves.choosenTwo[1])
+                }, 3000)
             }
         }
     }
 
     // Store card fronts
     var gamePlay = {
+
         // Play button triggers alert to play
         start: function() {
             gamePlay.arrangeBoard()
@@ -60,7 +63,6 @@
         },
 
         // Card Deck
-
         cardDeck1: ["android",
             "angular",
             "js",
@@ -147,6 +149,7 @@
 
         // Reset button
         reset:
+
         // Reset button: complete
             $('#reset').on('click', function(event) {
             event.preventDefault()
@@ -155,10 +158,10 @@
 
         // Play button
         play:
+
         // Play button
             $('#play').on('click', function(event) {
             event.preventDefault()
             gamePlay.start();
-            // trigger concentration()
         })
     }

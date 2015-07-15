@@ -1,7 +1,11 @@
 * {
     box-sizing: border-box;
-    color: white;
-    font-family: monospace;
+    color: grey;
+    font-family: helvetica;
+}
+
+img {
+    background-repeat: no-repeat;
 }
 
 main {
@@ -42,6 +46,7 @@ header {
     width: 10%;
     text-align: center;
     text-indent: -9999px;
+    background-repeat: no-repeat;
     margin: 0 3px;
     min-width: 100px;
     height: 90%;
@@ -49,7 +54,7 @@ header {
 }
 
 .back {
-    background-image: url(../img/binary2.jpg);
+    background-image: url(../img/binary3.jpg);
 }
 
 
@@ -221,6 +226,8 @@ footer {
 }
 
 .button {
+    background-color: black;
+    color: cyan;
     width: 4em;
     height: 2em;
     border: solid white 1px;
