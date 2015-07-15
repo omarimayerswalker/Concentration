@@ -2,6 +2,7 @@
 
     var playerMoves = {
         twoCards: [],
+        choosenTwo: [],
         cardCounter: null,
         cardSelect: $('.card').on('click', function(event) {
             event.preventDefault()
@@ -18,11 +19,30 @@
         }),
         reveal: function(event) {
             var clickedCard = $(event).html()
-            // Reveal the reverse of the selected card
-            console.log(event)
-            console.log(clickedCard)
-            // $(event).removeClass('back')
-            $(event).addClass(clickedCard)
+                // Reveal the reverse of the selected card
+                // $(event).removeClass('back')
+            if (playerMoves.cardCounter < 2) {
+
+                //"flips" over card
+                $(event).addClass(clickedCard)
+                playerMoves.choosenTwo.push(clickedCard)
+                playerMoves.cardCounter++
+                playerMoves.match(playerMoves.choosenTwo)
+                    // $(event).addClass("back")
+            }else {
+                playerMoves.cardCounter = 0
+                playerMoves.choosenTwo = []
+            }
+        },
+
+        match: function(twoCards) {
+            console.log(twoCards)
+                if (twoCards[0] == twoCards[1]){
+                    alert("You have a match!")
+                    playerMoves.cardCounter = 0
+                    playerMoves.choosenTwo = []
+                    console.log(playerMoves.cardCounter)
+                }
         }
     }
 
@@ -38,13 +58,13 @@
 
         cardDeck1: ["android",
             "angular",
-            "antergos",
+            "js",
             "arch",
             "backbone",
             "bitcoin",
             "bower",
             "C",
-            "C++",
+            "Cplusplus",
             "chakra",
             "clementine",
             "coffee",
@@ -54,52 +74,6 @@
             "dart",
             "debian",
             "diaspora"
-        ],
-
-        // Taken cards
-        taken: [],
-
-        // Card positions in DOM
-
-        boardPosition: ["r1c1", // 0
-            "r1c2", //  1
-            "r1c3", //  2
-            "r1c4", //  3
-            "r1c5", //  4
-            "r1c6", //  5
-            "r1c7", //  6
-            "r1c8", //  7
-            "r1c9", //  8
-
-            "r2c1", //  9
-            "r2c2", // 10
-            "r2c3", // 11
-            "r2c4", // 12
-            "r2c5", // 13
-            "r2c6", // 14
-            "r2c7", // 15
-            "r2c8", // 16
-            "r2c9", // 17
-
-            "r3c1", // 18
-            "r3c2", // 19
-            "r3c3", // 20
-            "r3c4", // 21
-            "r3c5", // 22
-            "r3c6", // 23
-            "r3c7", // 24
-            "r3c8", // 25
-            "r3c9", // 26
-
-            "r4c1", // 27
-            "r4c2", // 28
-            "r4c3", // 29
-            "r4c4", // 30
-            "r4c5", // 31
-            "r4c6", // 32
-            "r4c7", // 33
-            "r4c8", // 34
-            "r4c9", // 35
         ],
 
         fullBoard: [],
@@ -123,45 +97,45 @@
 
         // Associates the cards to the DOM
         addToBoard: function() {
-                $("#r1c1").append(gamePlay.shuffledBoard[0])
-                $("#r1c2").append(gamePlay.shuffledBoard[1])
-                $("#r1c3").append(gamePlay.shuffledBoard[2])
-                $("#r1c4").append(gamePlay.shuffledBoard[3])
-                $("#r1c5").append(gamePlay.shuffledBoard[4])
-                $("#r1c6").append(gamePlay.shuffledBoard[5])
-                $("#r1c7").append(gamePlay.shuffledBoard[6])
-                $("#r1c8").append(gamePlay.shuffledBoard[7])
-                $("#r1c9").append(gamePlay.shuffledBoard[8])
+            $("#r1c1").append(gamePlay.shuffledBoard[0])
+            $("#r1c2").append(gamePlay.shuffledBoard[1])
+            $("#r1c3").append(gamePlay.shuffledBoard[2])
+            $("#r1c4").append(gamePlay.shuffledBoard[3])
+            $("#r1c5").append(gamePlay.shuffledBoard[4])
+            $("#r1c6").append(gamePlay.shuffledBoard[5])
+            $("#r1c7").append(gamePlay.shuffledBoard[6])
+            $("#r1c8").append(gamePlay.shuffledBoard[7])
+            $("#r1c9").append(gamePlay.shuffledBoard[8])
 
-                $("#r2c1").append(gamePlay.shuffledBoard[9])
-                $("#r2c2").append(gamePlay.shuffledBoard[10])
-                $("#r2c3").append(gamePlay.shuffledBoard[11])
-                $("#r2c4").append(gamePlay.shuffledBoard[12])
-                $("#r2c5").append(gamePlay.shuffledBoard[13])
-                $("#r2c6").append(gamePlay.shuffledBoard[14])
-                $("#r2c7").append(gamePlay.shuffledBoard[15])
-                $("#r2c8").append(gamePlay.shuffledBoard[16])
-                $("#r2c9").append(gamePlay.shuffledBoard[17])
+            $("#r2c1").append(gamePlay.shuffledBoard[9])
+            $("#r2c2").append(gamePlay.shuffledBoard[10])
+            $("#r2c3").append(gamePlay.shuffledBoard[11])
+            $("#r2c4").append(gamePlay.shuffledBoard[12])
+            $("#r2c5").append(gamePlay.shuffledBoard[13])
+            $("#r2c6").append(gamePlay.shuffledBoard[14])
+            $("#r2c7").append(gamePlay.shuffledBoard[15])
+            $("#r2c8").append(gamePlay.shuffledBoard[16])
+            $("#r2c9").append(gamePlay.shuffledBoard[17])
 
-                $("#r3c1").append(gamePlay.shuffledBoard[18])
-                $("#r3c2").append(gamePlay.shuffledBoard[19])
-                $("#r3c3").append(gamePlay.shuffledBoard[20])
-                $("#r3c4").append(gamePlay.shuffledBoard[21])
-                $("#r3c5").append(gamePlay.shuffledBoard[22])
-                $("#r3c6").append(gamePlay.shuffledBoard[23])
-                $("#r3c7").append(gamePlay.shuffledBoard[24])
-                $("#r3c8").append(gamePlay.shuffledBoard[25])
-                $("#r3c9").append(gamePlay.shuffledBoard[26])
+            $("#r3c1").append(gamePlay.shuffledBoard[18])
+            $("#r3c2").append(gamePlay.shuffledBoard[19])
+            $("#r3c3").append(gamePlay.shuffledBoard[20])
+            $("#r3c4").append(gamePlay.shuffledBoard[21])
+            $("#r3c5").append(gamePlay.shuffledBoard[22])
+            $("#r3c6").append(gamePlay.shuffledBoard[23])
+            $("#r3c7").append(gamePlay.shuffledBoard[24])
+            $("#r3c8").append(gamePlay.shuffledBoard[25])
+            $("#r3c9").append(gamePlay.shuffledBoard[26])
 
-                $("#r4c1").append(gamePlay.shuffledBoard[27])
-                $("#r4c2").append(gamePlay.shuffledBoard[28])
-                $("#r4c3").append(gamePlay.shuffledBoard[29])
-                $("#r4c4").append(gamePlay.shuffledBoard[30])
-                $("#r4c5").append(gamePlay.shuffledBoard[31])
-                $("#r4c6").append(gamePlay.shuffledBoard[32])
-                $("#r4c7").append(gamePlay.shuffledBoard[33])
-                $("#r4c8").append(gamePlay.shuffledBoard[34])
-                $("#r4c9").append(gamePlay.shuffledBoard[35])
+            $("#r4c1").append(gamePlay.shuffledBoard[27])
+            $("#r4c2").append(gamePlay.shuffledBoard[28])
+            $("#r4c3").append(gamePlay.shuffledBoard[29])
+            $("#r4c4").append(gamePlay.shuffledBoard[30])
+            $("#r4c5").append(gamePlay.shuffledBoard[31])
+            $("#r4c6").append(gamePlay.shuffledBoard[32])
+            $("#r4c7").append(gamePlay.shuffledBoard[33])
+            $("#r4c8").append(gamePlay.shuffledBoard[34])
+            $("#r4c9").append(gamePlay.shuffledBoard[35])
         }
     }
 
