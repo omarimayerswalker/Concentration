@@ -46,6 +46,9 @@ var playerMoves = {
         // Finds a match between two cards
         if (twoCards[0] == twoCards[1]) {
             alert("You have a match!")
+            for (var i = 0; i < playerMoves.twoCards.length; i++){
+                $("#" + playerMoves.twoCards[i]).addClass("flipOutY")
+            }
             console.log(playerMoves.choosenTwo)
             playerMoves.cardCounter = 0
             playerMoves.choosenTwo = []
