@@ -1,8 +1,8 @@
 $(document).ready(function() {
-        gamePlay.start();
-    })
+    gamePlay.start();
+})
 
-    // Player Moves
+// Player Moves
 
 var playerMoves = {
     twoCards: [],
@@ -46,8 +46,12 @@ var playerMoves = {
         // Finds a match between two cards
         if (twoCards[0] == twoCards[1]) {
             alert("You have a match!")
+            console.log(playerMoves.choosenTwo)
+            // var hide1 = $('#' + playerMoves.twoCards[0]).hide()
+            // var hide2 = $('#' + playerMoves.twoCards[1]).hide()
             playerMoves.cardCounter = 0
             playerMoves.choosenTwo = []
+            console.log(playerMoves.choosenTwo)
         } else {
             var delay = setTimeout(function() {
                 $("div").removeClass(playerMoves.choosenTwo[0])
